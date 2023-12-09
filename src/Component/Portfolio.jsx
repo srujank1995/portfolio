@@ -1,37 +1,35 @@
 import React from "react";
-import arrayDestruct from "../Assets/Portfolio/arrayDestruct.jpg";
+import ReactWeather from '../Assets/Portfolio/ReactWeather.jpg'
 import installNode from "../Assets/Portfolio/installNode.jpg";
 import navbar from "../Assets/Portfolio/navbar.jpg";
-import reactParallax from "../Assets/Portfolio/reactParallax.jpg";
-import reactSmooth from "../Assets/Portfolio/reactSmooth.jpg";
-import reactWeather from "../Assets/Portfolio/reactWeather.jpg";
+import ReactClassQuiz from '../Assets/Portfolio/ReactClassQuiz.jpg'
 
 const Portfolio = () => {
   const portfolios = [
-    // {
-    //   id: 1,
-    //   src: arrayDestruct,
-    // },
-    // {
-    //   id: 2,
-    //   src: reactParallax,
-    // },
-    // {
-    //   id: 3,
-    //   src: navbar,
-    // },
-    // {
-    //   id: 4,
-    //   src: reactSmooth,
-    // },
     {
       id: 1,
-      src: installNode,
+      src: ReactWeather,
+      title:"React Weather Forecast App",
+      code:"https://github.com/srujank1995/Simple-Weather-app",
     },
-    // {
-    //   id: 6,
-    //   src: reactWeather,
-    // },
+    {
+      id: 2,
+      src: ReactClassQuiz,
+      title:"React Quiz App",
+      code:"https://github.com/srujank1995/Simple-Weather-app",
+    },
+    {
+      id: 3,
+      src: navbar,
+      title:"Navigation bar using class",
+      code:"https://github.com/srujank1995/Simple-Weather-app"
+    },
+    {
+      id: 4,
+      src: installNode,
+      title:"Node (NPM) Properties.",
+      code:"https://github.com/srujank1995/Simple-Weather-app"
+    },
   ];
 
   return (
@@ -48,7 +46,7 @@ const Portfolio = () => {
         </div>
 
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0">
-          {portfolios.map(({ id, src }) => (
+          {portfolios.map(({ id, src, title, code }) => (
             <div key={id} className="shadow-md shadow-gray-600 rounded-lg">
               <img
                 src={src}
@@ -56,12 +54,12 @@ const Portfolio = () => {
                 className="rounded-md duration-200 hover:scale-105"
               />
               <div className="flex items-center justify-center">
-                <button className="w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105">
-                  Demo
+                <button className="w-1/2 px-6 py-3 m-3 duration-200 hover:scale-105">
+                  {title}
                 </button>
-                <button className="w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105">
+                <a href={code} className="w-1 px-5 py-3 m-4 duration-200 hover:scale-105" >
                   Code
-                </button>
+                </a>
               </div>
             </div>
           ))}

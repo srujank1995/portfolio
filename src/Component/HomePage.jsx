@@ -6,16 +6,16 @@ import { Link } from "react-scroll";
 const HomePage = () => {
   return (
     <div
-      name="home"
-      className="h-screen w-full bg-gradient-to-b from-black via-black to-gray-800"
-    >
-      <div className="max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full px-4 md:flex-row">
-        <div className="flex flex-col justify-center h-full">
-          <h2 className="text-white font-semibold text-6xl font-serif">
-            I'm a Full Stack Developer
-          </h2>
+    name="home"
+    className="h-screen w-full bg-gradient-to-b from-black via-black to-gray-800"
+  >
+    <div className="max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full px-4 md:flex-row">
+      <div className="flex flex-col justify-center h-full">
+        <h2 className="text-4xl sm:text-7xl font-bold text-white">
+          I'm a Full Stack Developer
+        </h2>
           <p className="py-4 max-w-md text-gray-50 font-semibold">
-          Dedicated Full Stack Developer with 1 year of hands-on experience,
+            Dedicated Full Stack Developer with 1 year of hands-on experience,
             specializing in React.js as a primary skill and Core Java with
             Spring Boot as secondary expertise. Proficient in crafting intuitive
             and responsive web interfaces using React.js and adept at building
@@ -31,7 +31,7 @@ const HomePage = () => {
               to="portfolio"
               smooth
               duration={500}
-              className="group text-white w-fit px-6 py-3 my-2 flex items-center rounded-md bg-gradient-to-r from-cyan-500 to-blue-500 cursor-pointer"
+              className="min-[320px]:text-center max-[600px]:bg-sky-300 group text-white w-fit px-6 py-3 my-2 flex items-center rounded-md bg-gradient-to-r from-cyan-500 to-blue-500 cursor-pointer"
             >
               Portfolio
               <span className="group-hover:rotate-90 duration-300">
